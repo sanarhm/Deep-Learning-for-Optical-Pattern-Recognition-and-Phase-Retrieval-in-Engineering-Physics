@@ -262,6 +262,14 @@ Predicted Wavelength
 
 The trained model demonstrates strong agreement between predicted and true wavelength values on unseen validation samples.
 
+## Diffraction Pattern Example
+
+<p align="center">
+<img width="425" height="435" alt="download (1)" src="https://github.com/user-attachments/assets/d5644fca-4acc-4370-85ea-a1685f9b7751" />
+</p>
+
+---
+
 ## Training Loss
 
 <p align="center">
@@ -322,31 +330,21 @@ cd Optical-Wavelength-Prediction-CNN
 pip install numpy scipy matplotlib torch torchvision
 ```
 
-Or using requirements file:
-
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 # ▶️ Usage
-
-## Step 1 — Generate Dataset
-
-```bash
-python data_generator.py
-```
-
-Generates synthetic Fraunhofer diffraction patterns across the visible spectrum.
-
----
-
-## Step 2 — Train CNN Model
+This project is organized as a single Python file for dataset generation, training, evaluation, and plotting.
 
 ```bash
-python train_and_eval.py
+python optical_wavelength_cnn.py
 ```
+This single script will:
+
+* Generate synthetic Fraunhofer diffraction data
+* Train the CNN model
+* Evaluate predictions on validation samples
+* Save the trained model
+* Produce training and result plots
 
 Outputs:
 
